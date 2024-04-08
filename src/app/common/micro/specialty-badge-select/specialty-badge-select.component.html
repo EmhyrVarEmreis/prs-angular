@@ -1,0 +1,2 @@
+<app-specialty-badge *ngFor="let spec of specialties" [specialty]="spec.name" [selectable]="true"
+                     [selected]="isSelected(spec)" (selectedChange)="select(spec, $event)"></app-specialty-badge>

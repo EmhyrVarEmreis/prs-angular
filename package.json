@@ -1,0 +1,52 @@
+{
+    "name": "prs-angular",
+    "version": "0.0.0",
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve --proxy-config proxy.dev.conf.json --port 3013 --host 0.0.0.0 --disable-host-check",
+        "start-adv": "ng serve --proxy-config proxy.adv.conf.js --port 3014 --host 0.0.0.0 --disable-host-check",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "lint-fix": "ng lint --fix",
+        "e2e": "ng e2e",
+        "generate-api": "openapi-generator-cli generate"
+    },
+    "private": true,
+    "dependencies": {
+        "@angular/animations": "~8.2.14",
+        "@angular/common": "~8.2.14",
+        "@angular/compiler": "~8.2.14",
+        "@angular/core": "~8.2.14",
+        "@angular/forms": "~8.2.14",
+        "@angular/platform-browser": "~8.2.14",
+        "@angular/platform-browser-dynamic": "~8.2.14",
+        "@angular/router": "~8.2.14",
+        "bootstrap": "~4.6.2",
+        "rxjs": "~6.4.0",
+        "tslib": "^1.10.0",
+        "zone.js": "~0.9.1"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "~0.803.29",
+        "@angular/cli": "~8.3.29",
+        "@angular/compiler-cli": "~8.2.14",
+        "@angular/language-service": "~8.2.14",
+        "@openapitools/openapi-generator-cli": "^2.13.1",
+        "@types/node": "~8.9.4",
+        "ts-node": "~7.0.0",
+        "tslint": "~6.1.0",
+        "typescript": "~3.5.3",
+        "eslint": "^7.6.0",
+        "eslint-plugin-import": "2.22.1",
+        "eslint-plugin-jsdoc": "30.7.6",
+        "eslint-plugin-prefer-arrow": "1.2.2",
+        "@angular-eslint/builder": "1.2.0",
+        "@angular-eslint/eslint-plugin": "1.2.0",
+        "@angular-eslint/eslint-plugin-template": "1.2.0",
+        "@angular-eslint/schematics": "1.2.0",
+        "@angular-eslint/template-parser": "1.2.0",
+        "@typescript-eslint/eslint-plugin": "4.3.0",
+        "@typescript-eslint/parser": "4.3.0"
+    }
+}

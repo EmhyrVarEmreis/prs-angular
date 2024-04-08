@@ -1,0 +1,7 @@
+{
+  "/petclinic/api": {
+    "target": "http://localhost:9966/",
+    "changeOrigin": true,
+    "secure": false
+  }
+}

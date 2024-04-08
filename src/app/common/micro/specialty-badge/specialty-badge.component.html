@@ -1,0 +1,16 @@
+<span class="ml-1 mr-2 badge badge-pill badge-primary"
+      [hidden]="specialty != 'radiology'"
+      [class.pointer]="selectable"
+      [class.selected]="selected" (click)="select()">Radiology</span>
+<span class="ml-1 mr-2 badge badge-pill badge-secondary"
+      [hidden]="specialty != 'surgery'"
+      [class.pointer]="selectable"
+      [class.selected]="selected" (click)="select()">Surgery</span>
+<span class="ml-1 mr-2 badge badge-pill badge-info"
+      [hidden]="specialty != 'dentistry'"
+      [class.pointer]="selectable"
+      [class.selected]="selected" (click)="select()">Dentistry</span>
+<span class="ml-1 mr-2 badge badge-pill badge-light"
+      [hidden]="specialty == 'radiology' || specialty == 'surgery' || specialty == 'dentistry'"
+      [class.pointer]="selectable"
+      [class.selected]="selected" (click)="select()">Unknown</span>

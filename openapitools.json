@@ -1,0 +1,24 @@
+{
+    "$schema": "node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+    "spaces": 4,
+    "generator-cli": {
+        "version": "6.2.1",
+        "generators": {
+            "v1.0": {
+                "generatorName": "typescript-angular",
+                "output": "src/app/api-module",
+                "glob": "spec/*.{json,yaml,yml}",
+                "typeMappings": {
+                    "DateTime": "Date"
+                },
+                "additionalProperties": {
+                    "apiModulePrefix": "",
+                    "serviceFileSuffix": "-api.service",
+                    "serviceSuffix": "ApiService",
+                    "fileNaming": "kebab-case",
+                    "ngVersion": "10.2.4"
+                }
+            }
+        }
+    }
+}

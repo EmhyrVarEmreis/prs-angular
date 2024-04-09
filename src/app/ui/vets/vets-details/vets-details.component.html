@@ -1,0 +1,20 @@
+<h1 *ngIf="vet">{{ vet.id ? 'Vet ' + vet.id : 'New vet' }}</h1>
+<hr/>
+<form *ngIf="form" [formGroup]="form">
+    <div class="form-group">
+        <label for="vetFirstName">Firstname</label>
+        <input type="text" class="form-control" id="vetFirstName" formControlName="firstName">
+    </div>
+    <div class="form-group">
+        <label for="vetLastname">Lastname</label>
+        <input type="text" class="form-control" id="vetLastname" formControlName="lastName">
+    </div>
+    <div class="form-group">
+        <label for="vetSpecialties">Specialties</label>
+        <app-specialty-badge-select formControlName="specialties"></app-specialty-badge-select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<div class="spinner-border" role="status" [hidden]="!loading">
+    <span class="sr-only">Loading...</span>
+</div>

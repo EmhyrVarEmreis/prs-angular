@@ -1,0 +1,27 @@
+<h1>Vets list</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Specialties</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let vet of vets; let i = index;">
+        <th scope="row">{{ i }}</th>
+        <td>{{ vet.firstName }}</td>
+        <td>{{ vet.lastName }}</td>
+        <td>
+            <app-specialty-badge *ngFor="let spec of vet.specialties" [specialty]="spec.name"></app-specialty-badge>
+        </td>
+        <td>
+            <a [routerLink]="['..', vet.id]">Edit</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-dark mt-2 mb-2" routerLink="../new">Add vet</button>

@@ -7,10 +7,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class EventsCounterComponent implements OnInit {
 
+    public count: number = 0;
+
     constructor() {
     }
 
-    ngOnInit() {
+    public ngOnInit() {
     }
 
 }

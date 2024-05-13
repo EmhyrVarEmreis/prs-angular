@@ -6,9 +6,15 @@ This project is for educational purposes
 
 Each chapter is separate branch
 
-### p1
+### p3
 
-Basic app
+In this exercise we will try to establish communication between 3 components using a service as a proxy.
+Topics discussed:
+
+- Between-components communication patterns (data-service)
+- Observables
+- Artificially emitting values regularly
+- Limiting observable output by reducing emissions interval
 
 ## Angular info
 

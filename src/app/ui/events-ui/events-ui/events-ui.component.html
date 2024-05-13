@@ -1,0 +1,25 @@
+<h1>Events</h1>
+<p class="text-justify">Events are plain string messages.
+    Try to make events creator panel work using EventsService as mean of communication.
+    Enabling automatic events creation should automatically create events every 1200ms.
+    Status of automatic creation should be properly displayed on button text.
+    However events counter should be updated no more often than every 3000ms.
+    Toasted events should disappear after 6000ms.
+    Toasted event is bootstrap's card component with only card body present.
+    On entry toaster should display last event (if exists).
+    Clear all removes all toasted events at once and resets the counter.
+    Make counter display current events count.
+    Counter should reset automatically only on web application restart.</p>
+<div class="row">
+    <div class="col-6">
+        <app-events-counter></app-events-counter>
+    </div>
+    <div class="col-6">
+        <app-events-toaster></app-events-toaster>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <app-events-creator></app-events-creator>
+    </div>
+</div>

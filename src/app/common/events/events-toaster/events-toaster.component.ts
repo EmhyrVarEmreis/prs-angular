@@ -7,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class EventsToasterComponent implements OnInit {
 
+    public events: string[] = [];
+
     constructor() {
     }
 

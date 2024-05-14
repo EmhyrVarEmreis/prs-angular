@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {EventsService} from "../events.service";
 
 @Component({
     selector:    'app-events-counter',
@@ -9,10 +10,12 @@ export class EventsCounterComponent implements OnInit {
 
     public count: number = 0;
 
-    constructor() {
+    constructor(
+        private eventsService: EventsService,
+    ) {
     }
 
-    public ngOnInit() {
+    public ngOnInit(): void {
     }
 
 }

@@ -19,6 +19,9 @@ export class EventsToasterComponent implements OnInit {
         this.eventsService.eventsEmitter.subscribe(event => {
             this.events.push(event);
         });
+        this.eventsService.clearEvent.subscribe(() => {
+            this.events = [];
+        });
     }
 
 }

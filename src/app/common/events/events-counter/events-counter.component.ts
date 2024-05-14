@@ -8,6 +8,8 @@ import {EventsService} from "../events.service";
 })
 export class EventsCounterComponent implements OnInit {
 
+    private static LS_KEY_COUNTER = 'counter';
+
     public count: number = 0;
 
     constructor(
@@ -16,7 +18,14 @@ export class EventsCounterComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        this.eventsService.eventsEmitter.subscribe(() => this.count++);
+        this.count = JSON.parse(localStorage.getItem(EventsCounterComponent.LS_KEY_COUNTER));
+        this.eventsService.eventsEmitter.subscribe(() => {
+            this.count++;
+            localStorage.setItem(EventsCounterComponent.LS_KEY_COUNTER, JSON.stringify(this.count));
+        });
+        this.eventsService.clearEvent.subscribe(() => {
+            this.count = 0;
+        });
     }
 
 }

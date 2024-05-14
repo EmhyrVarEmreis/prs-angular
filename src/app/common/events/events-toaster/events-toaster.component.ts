@@ -16,6 +16,9 @@ export class EventsToasterComponent implements OnInit {
     }
 
     public ngOnInit(): void {
+        this.eventsService.eventsEmitter.subscribe(event => {
+            this.events.push(event);
+        });
     }
 
 }

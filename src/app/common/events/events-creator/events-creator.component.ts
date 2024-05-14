@@ -22,4 +22,8 @@ export class EventsCreatorComponent implements OnInit {
         this.eventsService.emit(EventsCreatorComponent.EVENT_DEFAULT_TEXT);
     }
 
+    public clearAll(): void {
+        this.eventsService.clear();
+    }
+
 }

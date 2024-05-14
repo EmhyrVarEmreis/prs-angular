@@ -16,6 +16,7 @@ export class EventsCounterComponent implements OnInit {
     }
 
     public ngOnInit(): void {
+        this.eventsService.eventsEmitter.subscribe(() => this.count++);
     }
 
 }

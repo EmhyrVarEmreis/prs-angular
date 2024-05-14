@@ -8,12 +8,18 @@ import {EventsService} from "../events.service";
 })
 export class EventsCreatorComponent implements OnInit {
 
+    public static EVENT_DEFAULT_TEXT: string = 'This is default event';
+
     constructor(
         private eventsService: EventsService,
     ) {
     }
 
     public ngOnInit(): void {
+    }
+
+    public createEventDefault(): void {
+        this.eventsService.emit(EventsCreatorComponent.EVENT_DEFAULT_TEXT);
     }
 
 }

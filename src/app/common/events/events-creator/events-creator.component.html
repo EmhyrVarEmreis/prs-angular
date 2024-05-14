@@ -1,7 +1,9 @@
 <h2>Events creator panel</h2>
 <div class="btn-group btn-block" role="group" aria-label="Events controller">
     <button type="button" class="btn btn-primary" (click)="createEventDefault()">Create default</button>
-    <button type="button" class="btn btn-primary">Create with text</button>
-    <button type="button" class="btn btn-primary">Toggle automatic creation (Current state: on)</button>
+    <button type="button" class="btn btn-primary" (click)="createEventCustom()">Create with text</button>
+    <button type="button" class="btn btn-primary" (click)="toggleAutomaticEventCreation()">Toggle automatic creation
+        (Current state: {{ automaticState }})
+    </button>
     <button type="button" class="btn btn-primary" (click)="clearAll()">Clear all</button>
 </div>

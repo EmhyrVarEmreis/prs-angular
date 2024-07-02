@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Vet, VetApiService} from "../../../api-module";
 
 @Component({
     selector:    'app-vets-list',
@@ -7,10 +8,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class VetsListComponent implements OnInit {
 
-    constructor() {
+    public vets: Vet[];
+    public loading: boolean;
+
+    constructor(
+        private vetApiService: VetApiService,
+    ) {
     }
 
     public ngOnInit() {
+        this.loading = true;
+        this.vetApiService.listVets().subscribe(_ => {
+            this.vets = _;
+            this.loading = false;
+        });
     }
 
 }
